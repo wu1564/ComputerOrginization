@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : Pipelined_CPU
+Version: Q-2019.12
+Date   : Sat Dec 19 02:51:18 2020
+****************************************
+
+Library(s) Used:
+
+    slow (File: /cad/CBDK/CBDK_IC_Contest_v2.1/SynopsysDC/db/slow.db)
+
+Number of ports:                         2711
+Number of nets:                         17795
+Number of cells:                        15071
+Number of combinational cells:          12406
+Number of sequential cells:              2537
+Number of macros/black boxes:               0
+Number of buf/inv:                       1500
+Number of references:                      51
+
+Combinational area:             113533.994896
+Buf/Inv area:                     9033.562661
+Noncombinational area:           75104.856647
+Macro/Black Box area:                0.000000
+Net Interconnect area:         2301518.266479
+
+Total cell area:                188638.851544
+Total area:                    2490157.118023
+1

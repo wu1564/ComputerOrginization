@@ -1,0 +1,101 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Simple_Single_CPU
+Version: Q-2019.12
+Date   : Wed Nov 11 16:10:54 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: PC/count_o_reg[2]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: PC/count_o_reg[30]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Simple_Single_CPU  tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  PC/count_o_reg[2]/CK (DFFRX1)                           0.00 #     0.50 r
+  PC/count_o_reg[2]/Q (DFFRX1)                            0.73       1.23 f
+  PC/count_o[2] (ProgramCounter)                          0.00       1.23 f
+  adder_PC_plusfour/srcA_i[2] (adder_2)                   0.00       1.23 f
+  adder_PC_plusfour/add_17/A[2] (adder_2_DW01_add_0_DW01_add_4)
+                                                          0.00       1.23 f
+  adder_PC_plusfour/add_17/U1_2/CO (ADDFHX4)              0.39       1.62 f
+  adder_PC_plusfour/add_17/U6/Y (NAND2X4)                 0.07       1.69 r
+  adder_PC_plusfour/add_17/U1/Y (NAND3X2)                 0.13       1.82 f
+  adder_PC_plusfour/add_17/U1_4/CO (ADDFHX4)              0.22       2.03 f
+  adder_PC_plusfour/add_17/U1_5/CO (ADDFHX2)              0.24       2.27 f
+  adder_PC_plusfour/add_17/U1_6/CO (ADDFHX4)              0.21       2.48 f
+  adder_PC_plusfour/add_17/U1_7/CO (ADDFHX2)              0.24       2.71 f
+  adder_PC_plusfour/add_17/U1_8/CO (ADDFHX4)              0.21       2.92 f
+  adder_PC_plusfour/add_17/U1_9/CO (ADDFHX2)              0.24       3.16 f
+  adder_PC_plusfour/add_17/U1_10/CO (ADDFHX4)             0.21       3.36 f
+  adder_PC_plusfour/add_17/U1_11/CO (ADDFHX2)             0.24       3.60 f
+  adder_PC_plusfour/add_17/U1_12/CO (ADDFHX4)             0.21       3.81 f
+  adder_PC_plusfour/add_17/U1_13/CO (ADDFHX2)             0.24       4.04 f
+  adder_PC_plusfour/add_17/U1_14/CO (ADDFHX4)             0.20       4.25 f
+  adder_PC_plusfour/add_17/U1_15/CO (ADDFX2)              0.36       4.61 f
+  adder_PC_plusfour/add_17/U1_16/CO (ADDFHX4)             0.23       4.84 f
+  adder_PC_plusfour/add_17/U1_17/CO (ADDFHX4)             0.23       5.07 f
+  adder_PC_plusfour/add_17/U16/Y (NAND2X1)                0.19       5.26 r
+  adder_PC_plusfour/add_17/U2/Y (NAND3X2)                 0.15       5.42 f
+  adder_PC_plusfour/add_17/U1_19/CO (ADDFHX4)             0.22       5.64 f
+  adder_PC_plusfour/add_17/U1_20/CO (ADDFHX2)             0.30       5.94 f
+  adder_PC_plusfour/add_17/U5/Y (NAND2X4)                 0.11       6.05 r
+  adder_PC_plusfour/add_17/U14/Y (AND2X2)                 0.22       6.27 r
+  adder_PC_plusfour/add_17/U4/Y (NAND2X6)                 0.10       6.37 f
+  adder_PC_plusfour/add_17/U3/Y (NAND2X4)                 0.08       6.46 r
+  adder_PC_plusfour/add_17/U36/Y (NAND3X1)                0.19       6.65 f
+  adder_PC_plusfour/add_17/U1_23/CO (ADDFHX4)             0.29       6.94 f
+  adder_PC_plusfour/add_17/U37/Y (NAND2X1)                0.18       7.12 r
+  adder_PC_plusfour/add_17/U11/Y (NAND3X1)                0.19       7.31 f
+  adder_PC_plusfour/add_17/U1_25/CO (ADDFHX2)             0.35       7.65 f
+  adder_PC_plusfour/add_17/U7/Y (NAND2X4)                 0.12       7.77 r
+  adder_PC_plusfour/add_17/U26/Y (NAND3X2)                0.13       7.89 f
+  adder_PC_plusfour/add_17/U1_27/CO (ADDFHX4)             0.25       8.15 f
+  adder_PC_plusfour/add_17/U10/Y (NAND2X1)                0.18       8.32 r
+  adder_PC_plusfour/add_17/U43/Y (NAND3X1)                0.22       8.54 f
+  adder_PC_plusfour/add_17/U1_29/CO (ADDFHX4)             0.30       8.84 f
+  adder_PC_plusfour/add_17/U29/Y (XOR2XL)                 0.42       9.26 f
+  adder_PC_plusfour/add_17/SUM[30] (adder_2_DW01_add_0_DW01_add_4)
+                                                          0.00       9.26 f
+  adder_PC_plusfour/sum_o[30] (adder_2)                   0.00       9.26 f
+  MUX_PC_Source/data0_i[30] (MUX_2to1_1)                  0.00       9.26 f
+  MUX_PC_Source/U8/Y (AO22X1)                             0.50       9.77 f
+  MUX_PC_Source/data_o[30] (MUX_2to1_1)                   0.00       9.77 f
+  MUX_PC_Branch/data0_i[30] (MUX_2to1_0)                  0.00       9.77 f
+  MUX_PC_Branch/U6/Y (AO22X1)                             0.40      10.16 f
+  MUX_PC_Branch/data_o[30] (MUX_2to1_0)                   0.00      10.16 f
+  PC/load_i[30] (ProgramCounter)                          0.00      10.16 f
+  PC/count_o_reg[30]/D (DFFRX1)                           0.00      10.16 f
+  data arrival time                                                 10.16
+
+  clock clk_i (rise edge)                                10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  PC/count_o_reg[30]/CK (DFFRX1)                          0.00      10.40 r
+  library setup time                                     -0.22      10.18
+  data required time                                                10.18
+  --------------------------------------------------------------------------
+  data required time                                                10.18
+  data arrival time                                                -10.16
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1

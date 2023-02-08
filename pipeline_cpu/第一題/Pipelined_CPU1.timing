@@ -1,0 +1,99 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Pipelined_CPU
+Version: Q-2019.12
+Date   : Sat Dec 19 02:59:23 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: IDEX10/data_reg[0]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: EX_MEX7/data_reg[2]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Pipelined_CPU      tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  IDEX10/data_reg[0]/CK (DFFRX1)                          0.00 #     0.50 r
+  IDEX10/data_reg[0]/Q (DFFRX1)                           0.63       1.13 f
+  IDEX10/data_o[0] (Pipe_Reg_size32_6)                    0.00       1.13 f
+  MUX_ALUSrc/data0_i[0] (MUX_2to1_0)                      0.00       1.13 f
+  MUX_ALUSrc/U22/Y (OAI2BB2X4)                            0.23       1.36 f
+  MUX_ALUSrc/data_o[0] (MUX_2to1_0)                       0.00       1.36 f
+  ALU/srcB_i[0] (ALU)                                     0.00       1.36 f
+  ALU/U42/Y (BUFX16)                                      0.14       1.51 f
+  ALU/add_37/B[0] (ALU_DW01_add_1_DW01_add_4)             0.00       1.51 f
+  ALU/add_37/U5/Y (CLKAND2X12)                            0.11       1.62 f
+  ALU/add_37/U1_1/CO (ADDFHX4)                            0.24       1.85 f
+  ALU/add_37/U3/Y (NAND2X2)                               0.12       1.98 r
+  ALU/add_37/U4/Y (NAND3X2)                               0.13       2.11 f
+  ALU/add_37/U1_3/CO (ADDFHX2)                            0.25       2.35 f
+  ALU/add_37/U1_4/CO (ADDFHX2)                            0.23       2.58 f
+  ALU/add_37/U1_5/CO (ADDFHX1)                            0.31       2.89 f
+  ALU/add_37/U1_6/CO (ADDFHX2)                            0.25       3.14 f
+  ALU/add_37/U1_7/CO (ADDFHX2)                            0.23       3.37 f
+  ALU/add_37/U1_8/CO (ADDFHX1)                            0.31       3.68 f
+  ALU/add_37/U1_9/CO (ADDFHX2)                            0.25       3.93 f
+  ALU/add_37/U1_10/CO (ADDFHX1)                           0.31       4.24 f
+  ALU/add_37/U1_11/CO (ADDFHX2)                           0.26       4.50 f
+  ALU/add_37/U1_12/CO (ADDFHX4)                           0.21       4.71 f
+  ALU/add_37/U1_13/CO (ADDFHX2)                           0.22       4.93 f
+  ALU/add_37/U1_14/CO (ADDFHX2)                           0.23       5.16 f
+  ALU/add_37/U1_15/CO (ADDFHX1)                           0.31       5.47 f
+  ALU/add_37/U1_16/CO (ADDFHX2)                           0.25       5.72 f
+  ALU/add_37/U1_17/CO (ADDFHX2)                           0.23       5.95 f
+  ALU/add_37/U1_18/CO (ADDFHX2)                           0.23       6.19 f
+  ALU/add_37/U1_19/CO (ADDFHX2)                           0.23       6.42 f
+  ALU/add_37/U1_20/CO (ADDFHX1)                           0.31       6.72 f
+  ALU/add_37/U1_21/CO (ADDFHX2)                           0.26       6.99 f
+  ALU/add_37/U1_22/CO (ADDFHX4)                           0.21       7.20 f
+  ALU/add_37/U1_23/CO (ADDFHX2)                           0.24       7.43 f
+  ALU/add_37/U1_24/CO (ADDFHX4)                           0.21       7.65 f
+  ALU/add_37/U1_25/CO (ADDFHX4)                           0.20       7.85 f
+  ALU/add_37/U1_26/CO (ADDFHX4)                           0.20       8.05 f
+  ALU/add_37/U1_27/CO (ADDFHX4)                           0.20       8.26 f
+  ALU/add_37/U1_28/CO (ADDFHX4)                           0.20       8.45 f
+  ALU/add_37/U1_29/CO (ADDFHX2)                           0.22       8.68 f
+  ALU/add_37/U1_30/S (ADDFHX2)                            0.29       8.96 f
+  ALU/add_37/SUM[30] (ALU_DW01_add_1_DW01_add_4)          0.00       8.96 f
+  ALU/U59/Y (NAND2X2)                                     0.11       9.07 r
+  ALU/U43/Y (AND3X6)                                      0.17       9.24 r
+  ALU/U65/Y (OAI211X2)                                    0.17       9.41 f
+  ALU/U19/Y (OR2X2)                                       0.28       9.69 f
+  ALU/U47/Y (NOR2X2)                                      0.15       9.84 r
+  ALU/U60/Y (NAND4X2)                                     0.16      10.00 f
+  ALU/U66/Y (NOR2X2)                                      0.15      10.15 r
+  ALU/NZCV_o[2] (ALU)                                     0.00      10.15 r
+  EX_MEX7/data_i[2] (Pipe_Reg_size4_0)                    0.00      10.15 r
+  EX_MEX7/data_reg[2]/D (DFFRX1)                          0.00      10.15 r
+  data arrival time                                                 10.15
+
+  clock clk_i (rise edge)                                10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  EX_MEX7/data_reg[2]/CK (DFFRX1)                         0.00      10.40 r
+  library setup time                                     -0.24      10.16
+  data required time                                                10.16
+  --------------------------------------------------------------------------
+  data required time                                                10.16
+  data arrival time                                                -10.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1
